@@ -1,0 +1,1 @@
+Creación de la App Horoscope por el curso intermedio de GitHub
