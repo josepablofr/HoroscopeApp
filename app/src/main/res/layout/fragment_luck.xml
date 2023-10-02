@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-     android:layout_height="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/primary"
     tools:context=".ui.luck.LuckFragment">
 
@@ -11,28 +11,28 @@
         android:id="@+id/preview"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
 
         <ImageView
             android:id="@+id/ivRoulette"
             android:layout_width="0dp"
             android:layout_height="400dp"
-            android:src="@drawable/ruleta"
             android:layout_marginBottom="-250dp"
+            android:src="@drawable/ruleta"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/reverse"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/card_back_small"
             android:scaleType="fitStart"
+            android:src="@drawable/card_back_small"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,44 +46,46 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="invisible"
-        tools:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
 
         <ImageView
             android:id="@+id/ivLuckyCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:background="@color/red"
-            app:layout_constraintHeight_percent="0.6"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvLucky"
+            style="@style/Body"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            style="@style/Body"
-            tools:text="HOLIWI PERRITO"
             android:layout_margin="32dp"
             android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvShare"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard" />
+            app:layout_constraintTop_toBottomOf="@+id/ivLuckyCard"
+            tools:text="HOLIWI PERRITO" />
 
         <TextView
             android:id="@+id/tvShare"
+            style="@style/Body"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
             android:text="@string/share"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLucky"/>
+            app:layout_constraintTop_toBottomOf="@+id/tvLucky" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
